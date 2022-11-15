@@ -1,0 +1,173 @@
+<html>
+
+<head>
+<title>Payment</title>
+<!--<link rel="stylesheet" type="text/css" href="registration.css">-->
+<style>
+.menu{
+    background-color: #131413;
+    padding: 0px;
+    margin: 0px;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #131413;
+}
+
+li {
+float:left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #4CAFFF;
+}
+
+#roundedcorners {
+    border-radius: 25px;
+    border: 2px solid none;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+    background-color: white;
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 0px;
+    border-radius: 55px;
+}
+.button:hover{
+    background-color: #4CAFFF;
+    color: white;
+}
+h4{
+font-size: 18px;    
+color: #4CAF50;
+}
+h2{
+ color:white;   
+}
+.menuleft:hover{
+   background-color: #4CAFFF; 
+    
+}
+.menuleft{
+ padding:0px 5px;   
+}
+h4{
+display: block;
+padding: 3px 10px;
+}
+td{
+vertical-align: middle;
+    color: #4CAF50;
+}
+body{
+  font-family:sans-serif;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/4k-car-wallpaper-3.jpg); 
+background-position: center;
+background-size: cover;
+}
+.footer{
+width: 100%;
+height: 5%;       
+}    
+    
+#roundedcorners td h4{
+    vertical-align: text-bottom;
+}
+
+#roundedcorners td{
+    vertical-align: text-bottom;
+}
+.paymentIcons{
+    margin-right: 55px;
+}
+</style>
+</head>    
+
+<body>
+<div class="menu" style="float:top; width: 100%; height:11%;">
+    <div class="menuleft" style="float:left;">
+    <a href="registration_with_js_validation.html" class="logo">
+    <h2 style="float:left;">Automobile Showroom</h2>
+    </a>
+    </div>
+    <div class="menuright" style="float:left;">
+        <ul> 
+            <li><a href="/">Home</a></li>
+            <!--
+            <li><a href="homepage.html" id="menufirstelement">Home</a></li>-->
+            <li><a href="/catalogue">Catalogue</a></li>
+            <li><a href="/shoppingcart"> Cart</a></li>
+            <li><a href="/payment">Payment</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>    
+    </div>    
+</div>     
+<div >
+<center>
+<table id="roundedcorners">
+	<tr>
+    <td colspan="2"><center><strong><h1 style="text-align:center; color:#af4c5c;">Payment</h1></strong></center></td>
+    </tr>
+    <tr>
+	<td><h4 style="color:#af4c5c">Card Number:</h4></td>
+	<td><input type="text" placeholder="1111 1111 1111 1111"></td>
+	</tr>
+    <tr>
+    <td><h4  style="color:#af4c5c">Card Holder's Name: </h4></td>
+	<td><input type="text" placeholder="(e.g.)abc"></td>
+	</tr>
+	<tr>
+	<td><h4  style="color:#af4c5c">Password: </h4></td>
+	<td><input type="password"  placeholder="********"></td>
+	</tr>
+	<tr>
+	<td><h4  style="color:#af4c5c">Expiration Date: </h4></td>
+	<td><input type="date" style="color:gray;"></td>
+	</tr>
+    <tr>
+    <td><h4  style="color:#af4c5c">CVV: </h4></td>
+	<td style="color:white;"><input type="text" placeholder="999" style="width:50px;"></td>
+	</tr>
+    <tr>
+        <td colspan="2">
+          <img src="https://000456558.codepen.website/icons/pay2.png" width=60px class="paymentIcons">
+            <img src="https://000456558.codepen.website/icons/pay3.png" width=60px class="paymentIcons">
+          <img src="https://000456558.codepen.website/icons/pay4.png" width=60px class="paymentIcons">
+        </td>
+	</tr>
+    <tr>
+    <td colspan="2">&nbsp;</td>    
+    </tr>    
+	<tr>
+        <td colspan="2"><form method="post" action="orderconfirm.html">
+        <input type="submit" value="Make Payment" class="button" style="width:100%;"></form></td>
+	</tr>
+</table>
+</center>
+</div>
+   
+    
+</body>
+</html>

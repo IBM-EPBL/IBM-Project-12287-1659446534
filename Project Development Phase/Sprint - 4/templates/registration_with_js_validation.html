@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>Registration</title>
+<!--<link rel="stylesheet" type="text/css" href="registration.css">-->
+<style>
+.menu{
+    background-color: #131413;
+    padding: 0px;
+    margin: 0px;
+}
+.menuright ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #131413;
+}
+
+.menuright li {
+float:left;
+}
+
+.menuright li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menuright a:hover {
+    background-color: #4CAFFF;
+}
+    
+.menuright div{
+    position: absolute;
+    visibility: hidden;
+    background: white;
+    border: 1px solid #4CAF50;
+}
+
+.menuright div a{
+    position: relative;
+    display: block;
+    padding 5px 10px;
+    width: auto;
+    text-align: left;
+    color: #4CAF50;
+}
+
+.menuright div a:hover{
+    color:white;
+}
+    
+#roundedcorners {
+    border-radius: 25px;
+    border: 2px solid none;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+    background-color: none;
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 0px;
+    border-radius: 55px;
+}
+h4{
+font-size: 18px;    
+color: white;
+}
+h2{
+ color:white;   
+}
+.menuleft:hover{
+   background-color: #4CAFFF; 
+    
+}
+.menuleft{
+ padding:0px 5px;   
+}
+h4{
+display: block;
+padding: 3px 10px;
+}
+td{
+vertical-align: middle;
+    color: #4CAF50;
+}
+body{
+  font-family:sans-serif;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/4k-car-wallpaper-3.jpg); 
+background-position: center;
+background-size: cover; 
+}
+.footer{
+width: 100%;
+height: 5%;    
+}    
+
+#roundedcorners td h4{
+    vertical-align: text-bottom;
+}
+
+#roundedcorners td{
+    vertical-align: text-bottom;
+}    
+</style>
+<script type="text/javascript">
+    var timeout = 500;
+    var closeTimer = 0;
+    var ddMenuItem = 0;
+    
+    function check(helpermsg)
+    {
+        var name = document.getElementById('req1');
+        var username = document.getElementById('req2');
+        var pwd = document.getElementById('comp1');
+        var pwd2 = document.getElementById('comp2');
+        var email = document.getElementById('email');
+			
+        if(username.value.charAt(0)=='a'|| username.value.charAt(0)=='u')
+        {
+            name.focus();
+            alert('Username should begin with '+'a or u');
+            return false;
+        }
+                
+        if(name.value.length==0)
+        {
+            name.focus();
+            alert(helpermsg+'name');
+            return false;
+        }
+        if(username.value.length==0)
+        {
+            username.focus();
+            alert(helpermsg+'username');
+            return false;
+        }
+        if(pwd.value!=pwd2.value||pwd.value=='')
+        {
+            alert('Passwords do not match');
+            return false;
+        }
+        
+    }
+    
+    function mOpen(id)
+    {
+        var idd = ""+id;
+        mCancelCloseTime();
+        if(ddMenuItem)
+            ddMenuItem.style.visibility='hidden';
+        ddMenuItem=document.getElementById(idd);
+        ddMenuItem.style.visibility='visible';
+    }
+    
+    
+    function mClose()
+    {
+        if(ddMenuItem)
+            ddMenuItem.style.visibility='hidden';
+    }
+    
+    function mCloseTime()
+    {
+        closeTimer = window.setTimeout(mClose,timeout);
+    }
+    
+    function mCancelCloseTime()
+    {
+        if(closeTimer)
+        {
+            window.clearTimeout(closeTimer);
+            closeTimer=null;
+        }
+    }
+    
+</script>    
+</head>    
+
+<body>
+<div class="menu" style="float:top; width: 100%; height:11%;">
+    <div class="menuleft" style="float:left;">
+    <a href="/registration_with_js_validation" class="logo">
+    <h2 style="float:left;">Book Store</h2>
+    </a>
+    </div>
+    <div class="menuright" style="float:left;">
+    <ul> 
+        <li><a href="/homepage" onmouseover="mOpen('m1')" onmouseout="mCloseTime()">Home</a>
+            <div id="m1" onmouseover="mCancelCloseTime()" onmouseout="mCloseTime()">
+                <a href="#">About Us</a>
+                <a href="#">Mission</a>
+                <a href="#">Vision</a>
+                <a href="#">Contact Us</a>
+            </div>            
+        </li>
+        <li><a href="/catalogue" onmouseover="mOpen('m2')" onmouseout="mCloseTime()">Catalogue</a>
+            <div id="m2" onmouseover="mCancelCloseTime()" onmouseout="mCloseTime()">
+                <a href="#">About Us</a>
+                <a href="#">Mission</a>
+                <a href="#">Vision</a>
+                <a href="#">Contact Us</a>
+            </div>             
+        </li>
+        <li><a href="/registration" onmouseover="mOpen('m3')" onmouseout="mCloseTime()">Register</a>
+            <div id="m3" onmouseover="mCancelCloseTime()" onmouseout="mCloseTime()">
+                <a href="#">About Us</a>
+                <a href="#">Mission</a>
+                <a href="#">Vision</a>
+                <a href="#">Contact Us</a>
+            </div>            
+        </li>
+        <li><a href="/shoppingcart" onmouseover="mOpen('m5')" onmouseout="mCloseTime()">Shopping Cart</a>
+            <div id="m5" onmouseover="mCancelCloseTime()" onmouseout="mCloseTime()">
+                <a href="#">About Us</a>
+                <a href="#">Mission</a>
+                <a href="#">Vision</a>
+                <a href="#">Contact Us</a>
+            </div>            
+        </li>
+        <li><a href="/payment">Payment</a></li>
+    </ul>   
+    </div>    
+</div>    
+
+
+<div>
+<center><strong><h1 style="text-align:center; color:white;">New User? Register Here.</h1></strong></center>
+<center>   
+<form action="lo.php" >    
+<table id="roundedcorners">
+	<tr>
+	<td><h4>Your name:<span class="star" style="color:red">*</span></h4></td>
+	<td><input type="text" placeholder="(e.g.) ABC" id="req1"></td>
+	</tr>
+	<tr>
+    <td><h4>Username:<span  class="star" style="color:red">*</span> </h4></td>
+	<td><input type="text" placeholder="(e.g.) ABC" id="req2"></td>
+	</tr>
+	<td><h4>Email:<span  class="star"  style="color:red">*</span> </h4></td>
+	<td><input type="text" placeholder="abc@gmail.com" id="email"></td>
+	</tr>
+	<tr>
+	<td><h4>Password:<span  class="star"  style="color:red">*</span> </h4></td>
+	<td><input type="password" placeholder="********" id="comp1"></td>
+	</tr>
+	<tr>
+	<td><h4>Confirm Password:<span class="star" style="color:red">*</span> </h4></td>
+	<td><input type="password" placeholder="********" id="comp2"></td>
+	</tr>
+    <tr>
+    <td><h4>Gender:<span  class="star" style="color:red">*</span> </h4></td>
+	<td style="color:white;"><input type="radio" value="male">Male <input type="radio" value="female">Female</td>
+	</tr>
+    <td><h4>Date of Birth:<span  class="star" style="color:red">*</span> </h4></td>
+	<td><input type="date" style="color:gray;"></td>
+	</tr>
+	<tr>
+    <td><h4>Address:</h4></td>
+	<td><textarea placeholder="Optional..."></textarea></td>
+	</tr>
+	<tr>
+    <td><h4>Zipcode:<span  class="star" style="color:red">*</span> </h4></td>
+	<td><input type="text" placeholder="111111" maxlength="6"></td>
+	</tr>
+	<tr>
+	<td colspan="2"><input type="button" onclick="return check('Please enter ')" value="Create your Bookstore account" class="button" style="width:100%;"></td>
+	</tr>
+</table> 
+</form>    
+</center>
+    
+</body>
+</html>
