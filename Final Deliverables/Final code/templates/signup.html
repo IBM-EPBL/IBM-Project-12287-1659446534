@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #9f9da7;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+ 
+   background-color: #9f9da7;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 0px;
+  max-width: 500px;
+  padding: 16px;
+  vertical-align: center;
+  background-color: white;
+  width:500px;
+  height: 600px;
+  margin:auto;
+  left: 70px;
+  top: 10px;
+
+
+}
+
+.button {
+  background-color:#00cccc;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 16px;
+  background-color: white;
+  color: black;
+  width:190;
+  border: 2px solid #00cccc;
+
+}
+.button2:hover {
+  background-color:#00cccc;
+  color: white;
+}
+
+/* Set a style for the submit button */
+
+
+</style>
+</head>
+<body >
+</br></br></br>
+<div class="bg-img">
+ 
+  <form class="container"  action="{{url_for('signup') }}" method="POST">
+    <h1>Sign-up/Register</h1>
+    <br>
+
+    <label for="name" style="font-size: 24">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter name" style="width: 100%;height: 30;padding: 9px;margin: 5px 0 22px 0;border: none;background: #f1f1f1;"><br>
+    <label for="addr" style="font-size: 24">Address:</label>
+    <input type="text" id="address" name="address" placeholder="Enter Address" style="width: 100%;height: 30;padding: 9px;margin: 5px 0 22px 0;border: none;background: #f1f1f1;"><br>
+    <label for="phone" style="font-size: 24">Phone:</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter Phone" style="width: 100%;height: 30;padding: 9px;margin: 5px 0 22px 0;border: none;background: #f1f1f1;"><br>
+    <label for="mail" style="font-size: 24">Email-id:</label>
+    <input type="email" id="email" name="email" placeholder="Enter Email" style="width: 100%;height: 30;padding: 9px;margin: 5px 0 22px 0;border: none;background: #f1f1f1;"><br>
+    <label for="password" style="font-size: 24">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter Password" style="width: 100%;height: 30;padding: 9px;margin: 5px 0 22px 0;border: none;background: #f1f1f1;"><br>
+    <input type="submit" class="button button2" name="submit" value="Register">
+
+</form>
+</div>
+</body>
+</html>

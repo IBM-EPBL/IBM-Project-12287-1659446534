@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: ibmin
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: ibmin
+   template:
+     metadata:
+       labels:
+         app: ibmin
+     spec:
+       containers:
+       - name: ibmin
+         image: icr.io/ibm_project/ibm_project
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000
